@@ -4,13 +4,14 @@ import Title from '../components/Title';
 import style from './App.css';
 import TodoList from '../components/TodoList';
 import Todo from '../components/Todo';
-
+import TodoForm from '../components/TodoForm';
 
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            title: "This is ToDo List app",
             data: [{
                     id: 1,
                     text: 'zadanie  do zrobienia 1'
@@ -46,24 +47,28 @@ class App extends React.Component {
                 style.TodoApp
             } >
             <
-            Title title = "ToDo List"
-            number = {
+            Title title = {
+                this.state.title
+            }
+            noumber = {
                 this.state.data.length
             }
             /> <
+            TodoForm addTodo = {
+                (value) => this.addTodo(value)
+            }
+            />   <
             TodoList items = {
                 this.state.data
             }
             remove = {
                 (id) => this.removeTodo(id)
             }
-            />
-            Tutaj pojawią się komponenty naszej aplikacji. <
-            /div>
+            />                < /
+            div >
         );
     }
 }
-
 
 export default App;
 //skonczylam na loader dla css
