@@ -3,8 +3,8 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeJsPlugin = require('optimize-js-plugin');
-var env = process.env.NODE_ENV || 'development';
-var plugins = [
+const env = process.env.NODE_ENV || 'development';
+const plugins = [
 new HtmlWebpackPlugin({
         template: 'src/index.html',
         filename: 'index.html',

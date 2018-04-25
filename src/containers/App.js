@@ -50,7 +50,7 @@ class App extends React.Component {
             Title title = {
                 this.state.title
             }
-            noumber = {
+            number = {
                 this.state.data.length
             }
             /> <
